@@ -4,7 +4,7 @@ while(True):
     if(n==1):
         break;
     if(n%m==0):
-        n//=m
+        n/=m
     else:
         n-=1
 
