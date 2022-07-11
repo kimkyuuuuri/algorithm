@@ -1,13 +1,21 @@
-x=int(input())
-d=[0]*3001
+n,m=map(int(input().split()))
+array=[]
+for i in range(n):
+    array.append(int(input()))
 
-for i in range(2,x+1):
-    d[i]=d[i-1]+1
-    if i%2==0:
-        d[i]=min(d[i],d[i//2]+1)
-    if i%3==0:
-        d[i]=min(d[i],d[i//3]+1)
-    if i%5==0:
-        d[i]=min(d[i],d[i//5]+1)
-print(d[x])
+d=[10001] *(m+1)
+
+d[0]=0
+for i in range(n):
+    #화폐 단위를 확인
+    for j in range(array[i],m+1):
+        #금액을 확인
+        if d[j-array[i]]!=10001 :
+            d[j]=min(d[j],d[j-array[i]]+1)
+
+if d[m]==10001:
+    print(-1)
+else:
+    print(d[m])
+
     
