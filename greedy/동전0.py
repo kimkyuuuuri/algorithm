@@ -5,7 +5,7 @@ for i in range(n):
     array.append(int(input()))
 
 for j in range(n-1,-1,-1):
-    print(j)
+   
     result+=k//array[j]
     k=k%array[j]
 
