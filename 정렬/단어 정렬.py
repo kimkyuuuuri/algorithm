@@ -1,7 +1,5 @@
 n=int(input())
 array=[]
-arraylen=[]
-
 
 for i in range(n):
         array.append(input())
