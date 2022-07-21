@@ -9,7 +9,7 @@ for i in range(n-e):
     graph.append([])
 
 
-print(graph)
+
 visited2=[False]*(n+1)
 from collections import deque
 def bfs(graph,start,visited2):
@@ -19,7 +19,8 @@ def bfs(graph,start,visited2):
     count=0
     while queue:
         v=queue.popleft()
-        print(graph[v])
+        print(v)
+      
         if graph[v] == []:
            continue;
         
@@ -29,7 +30,7 @@ def bfs(graph,start,visited2):
         
             if not visited2[i]:
                 
-                if not visited2[graph[v][0]] and not visited2[graph[v][1]] and count!=0:
+                if not visited2[graph[v][0]] and not visited2[graph[v][1]] and result!=1:
                     
                     return result-1
                 queue.append(i)
@@ -38,4 +39,4 @@ def bfs(graph,start,visited2):
     return result-1
 
 result=bfs(graph,1,visited2)
-print(result)
+#print(result)
