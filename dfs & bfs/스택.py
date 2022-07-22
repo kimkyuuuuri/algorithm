@@ -2,29 +2,31 @@ n=int(input())
 stack=[]
 for i in range(n):
     a=input()
-    
-    if a=='top':
-        if len(stack)!=0:
-            print(stack[-1])
-        else:
+    if a.split()[0]=='push':
+        stack.append(a.split()[1])
+        
+        
+    elif a=='top':
+        if not stack:
             print(-1)
+        else:
+            print(stack[-1])
     elif a=='size':
         print(len(stack))
     elif a=='pop':
-        if len(stack)!=0:
+        if not stack:
+            print(-1)
+        else:
             print(stack[-1])
             stack.pop()
-        else:
-            print(-1)
-        
+           
     elif a=='empty':
-        if len(stack)!=0:
-            print(0)
-        else:
+        if not stack:
             print(1)
-    else:
+        else:
+            print(0)
+   
         
-        stack.append(a.split()[1])
         
         
             
