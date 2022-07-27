@@ -18,4 +18,19 @@ SELECT ANIMAL_TYPE, COUNT(*) FROM ANIMAL_INS WHERE ANIMAL_TYPE = 'Dog'\
 SELECT NAME, COUNT(*) as COUNT From ANIMAL_INS  where NAME is NOT NULL\
 group by NAME\
 Having COUNT(*)>1\
-order by NAME }
+order by NAME \
+\
+#HOUR \'c7\'d4\'bc\'f6 \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2\
+SELECT HOUR(DATETIME) as HOUR,count(*) as COUNT  FROM ANIMAL_OUTS  \
+where HOUR(DATETIME) > 8 and HOUR(DATETIME) < 20 \
+GROUP BY HOUR ORDER BY HOUR\
+\
+#\'ba\'af\'bc\'f6 \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2\
+set @hour :=-1;\
+\
+select (@hour:=@hour+1) as HOUR,\
+(SELECT COUNT(*) FROM ANIMAL_OUTS WHERE HOUR(DATETIME)=@hour) as COUNT\
+From ANIMAL_OUTS\
+WHERE @hour<23\
+\
+}
