@@ -7,4 +7,15 @@
 
 \f0\fs24 \cf0 #
 \f1 count \'c1\'df\'ba\'b9\'c1\'a6\'b0\'c5\'c7\'d2 \'b6\'a7\'b4\'c2 distinct (\'c4\'ae\'b7\'b3\'b8\'ed\'c0\'bb \'c0\'d4\'b7\'c2\'c7\'cf\'b8\'e9 null\'b0\'aa\'c0\'ba \'b5\'e9\'be\'ee\'b0\'a1\'c1\'f6\'be\'ca\'b4\'c2\'b4\'d9. )\
-SELECT count(DISTINCT NAME) from ANIMAL_INS}
+SELECT count(DISTINCT NAME) from ANIMAL_INS\
+\
+#union \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2\
+SELECT ANIMAL_TYPE, COUNT(*) FROM ANIMAL_INS WHERE ANIMAL_TYPE = 'Cat'\
+UNION\
+SELECT ANIMAL_TYPE, COUNT(*) FROM ANIMAL_INS WHERE ANIMAL_TYPE = 'Dog'\
+\
+#Having \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2\
+SELECT NAME, COUNT(*) as COUNT From ANIMAL_INS  where NAME is NOT NULL\
+group by NAME\
+Having COUNT(*)>1\
+order by NAME }
