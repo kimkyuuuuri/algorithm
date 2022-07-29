@@ -21,6 +21,6 @@ for num in array:
     else:
         index = bisect_left(lis, num)
         lis[index] = num
-    ㅇ
+    
     
 print(ans)
