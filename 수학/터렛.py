@@ -17,5 +17,7 @@ for i in range(n):
     else:
         print(0)
 
+#원 방정식 이용
+
 
 
