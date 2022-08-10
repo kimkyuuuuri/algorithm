@@ -11,40 +11,32 @@ while True:
     if a[0]=='.' and len(a)==1:
         break
     for i in a:
-        if i=='[' or i==']' or i=='(' or i==')':
+        
+        if i=='[' or i== '(':
             dq.append(i)
             
-    for i in range(math.floor(len(dq)/2)):
-        
-        st=dq.pop()
-        
-        if(dq[-1]=='[' and st==']'):
-            dq.pop()
+        elif i==']':
+            if len(dq)==0:
+                result='no'
+                break
+            st=dq.pop()
             
-            continue
-        elif(dq[-1]=='(' and st==')'):
-            dq.pop()
-        
-            continue
-        
-        elif(dq[-0]=='[' and st==']'):
-            dq.popleft()
+            if st!='[':
+                result='no'
+                break
             
-          
-            continue
-        elif(dq[-0]=='(' and st==')'):
-            dq.popleft()
-         
-            continue
-        else:
+        elif i==')':
+            if len(dq)==0:
+                result='no'
+                break
+            st=dq.pop()
+            if st!='(':
+                result='no'
+                break
             
-            result='no'
-        if len(dq)==0:
-            break
         
-            
-    
-    if(len(dq)!=0):
+   
+    if (len(dq)!=0):
         result='no'
     print(result)
       
