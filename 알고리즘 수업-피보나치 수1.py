@@ -4,7 +4,7 @@ def fib(n) :
      
         return 1  # 코드1
     else :
-        return (fib(n - 1) + fib(n - 2));
+        return fib(n - 1) + fib(n - 2)
 
 
 def fibonacci(n) :
@@ -22,6 +22,8 @@ def fibonacci(n) :
 
 
 n=int(input())
+
+
 
 
 
