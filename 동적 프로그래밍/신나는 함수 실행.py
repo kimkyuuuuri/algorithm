@@ -6,18 +6,16 @@ def w(a,b,c):
     if a<=0 or b<=0 or c<=0:
         return 1
     elif a>20 or b>20 or c>20:
-        print(1)
-        print(array[a][b][c])
+        w(a,b,c)
         return array[a][b][c]
     elif a<b and b<c:
-        array[a][b][c]=array[a][b][c-1]+array[a][b-1][c-1]-array[a][b-1][c]
-        print(2)
-        print(array[a][b][c])
+        array[a][b][c]=w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c)
+        
+        
         return array[a][b][c]
     else:
-        array[a][b][c]=array[a-1][b][c]+array[a-1][b-1][c]+array[a-1][b][c-1]-array[a-1][b-1][c-1]
-        print(3)
-        print(array[a][b][c])
+        array[a][b][c]=w(a-1,b,c)+w(a-1,b-1,c)+w(a-1,b,c-1)-w(a-1,b-1,c-1)
+        
         return array[a][b][c]
 
 while True:
@@ -35,4 +33,5 @@ while True:
 
 #배열은 만들어둠! 음 어떻게 저장할지 고민해보기
 #현재 문제, 다 0으로 들어가고 함수가 한번밖에 호출이 안되고 있음 (재귀 X) -> 재귀적으로 호출이 안되는 것이 가장 큰 문제!
+#이제 음수 처리해야함!!
     
