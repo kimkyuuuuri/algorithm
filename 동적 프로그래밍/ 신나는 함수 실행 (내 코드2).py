@@ -5,8 +5,7 @@ sys.setrecursionlimit(10**6)
 
 def w(a,b,c):
     global array
-    if a<=0 or b<=0 or c<=0:
-            
+    if a<=0 or b<=0 or c<=0: 
         return 1
    
     elif a<b and b<c:
@@ -42,7 +41,7 @@ def w(a,b,c):
         return array[a][b][c]
 
 while True:
-    inputa,inputb,inputc = map(int,input().split())
+    inputa,inputb,inputc = map(int,sys.stdin.readline().split())
     
     
     array = [[[-1 for x in range(51)] for j in range(51)] for i in range(51)]
@@ -55,8 +54,7 @@ while True:
     
         print( "w(" +str(inputa)+", " +str(inputb)+ ", " + str(inputc) +") = "+ str(1048576))
     
-        
-            
+          
     else:
      
               

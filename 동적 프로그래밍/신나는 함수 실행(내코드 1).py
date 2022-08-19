@@ -7,6 +7,9 @@ sys.setrecursionlimit(10**6)
 
 def w(a,b,c):
     global array
+    global arraya
+    global arrayb
+    global arrayc
     if a<=0 or b<=0 or c<=0:
         
             
@@ -26,7 +29,11 @@ def w(a,b,c):
 
 while True:
     inputa,inputb,inputc = map(int,input().split())
-    array = [[[0 for x in range(50)] for j in range(50)] for i in range(50)]
+    arraya=[0]*inputa
+    arrayb=[0]*inputb
+    arrayc=[0]*inputc
+    
+    array = [[[0 for x in range(inputa)] for j in range(inputb)] for i in range(inputc)]
     
     if inputa==-1 and inputb==-1 and inputc==-1:
         break
@@ -51,4 +58,5 @@ while True:
 #이제 음수 처리해야함!!
 #음수이면 인덱스를 50 up 해서 넣을까?
 #메모리 초과 뜸!
+# 삼중배열이 문제인가?배열을 각각 만들어보
     
