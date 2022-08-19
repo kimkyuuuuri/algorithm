@@ -21,6 +21,7 @@ result=int(numbers[0])*2
 for i in numbers:
     result-=int(i)
 
+
 print(result)
       
         
