@@ -9,6 +9,7 @@ for i in a:
         calculation.append(i)
 
 
+
 for i in range(len(calculation)):
     if calculation[i]=='+':
         numbers[i+1]=int(numbers[i])+int(numbers[i+1])                             
