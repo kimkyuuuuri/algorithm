@@ -12,7 +12,7 @@ def isPrime(num):
 
     return True
 
-for i in range(a,b):
+for i in range(a,b+1):
     
     if isPrime(a):
         print(a)
