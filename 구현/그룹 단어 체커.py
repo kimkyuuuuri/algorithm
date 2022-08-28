@@ -10,15 +10,11 @@ for i in range(n):
         
         if string[j]!=string[j-1]:
             if string[j] in array:
-           
-                value=False
+                count-=1
                 break
             
             array.append(string[j])
 
-    if(value==False):
-        continue
-  
     count+=1
  
             
