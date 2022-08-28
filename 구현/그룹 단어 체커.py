@@ -1,5 +1,3 @@
-#구현
-
 n=int(input())
 count=0
 
@@ -17,8 +15,6 @@ for i in range(n):
                 break
             
             array.append(string[j])
-            print(array)
-            
 
     if(value==False):
         continue
@@ -26,9 +22,6 @@ for i in range(n):
     count+=1
  
             
-    
-            
-
 print(count)        
             
         
