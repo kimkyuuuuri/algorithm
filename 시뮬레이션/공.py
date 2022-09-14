@@ -9,8 +9,13 @@ for i in range(n):
     ninput=list(map(int,input().split()))
     #map의 용도가 뭐지?
     
-    array[ninput[0]-1], array[ninput[1]-1] = array[ninput[1]-1], array[ninput[0]-1]
+
+    array[ninput[0]-1], array[ninput[1]-1] =ninput[1], ninput[0]
+    print("test")
+    print(array[0])
+    print(array[1])
+    print(array[2])
 
 print(array[0])
 
-#현재 오류남
+#현재 오류
