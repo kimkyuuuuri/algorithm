@@ -8,13 +8,11 @@ array=[1,2,3]
 for i in range(n):
     ninput=list(map(int,input().split()))
     #map의 용도가 뭐지?
-    
+    a=array.index(ninput[0])
+    b=array.index(ninput[1])
 
-    array[ninput[0]-1], array[ninput[1]-1] =ninput[1], ninput[0]
-    print("test")
-    print(array[0])
-    print(array[1])
-    print(array[2])
+    array[a], array[b] = array[b], array[a]
+
 
 print(array[0])
 
