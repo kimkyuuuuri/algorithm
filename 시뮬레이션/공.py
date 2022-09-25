@@ -16,4 +16,5 @@ for i in range(n):
 
 print(array[0])
 
-#현재 오류
+#현재 오류 #고침!
+
