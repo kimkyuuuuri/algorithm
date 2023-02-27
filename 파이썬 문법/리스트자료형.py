@@ -45,6 +45,7 @@ n=3
 m=4
 
 # 반복을 위해서 변수를 사용해야하지만 의미가 없을 때 _ 를 사용한다.
+# 행이 n개 
 array = [[0] * m for _ in range(n)]
 print(array)
 
