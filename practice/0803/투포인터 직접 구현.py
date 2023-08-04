@@ -1,24 +1,20 @@
 n=5
 m=5
-
-# array 길이 5
-# 구해야하는 합은 5
-
 data = [1,2,3,2,5]
-len_sum=0
+
+interval_sum=0
 end=0
 count=0
 
-for start in range(len(data)):
-    while len_sum <n and end<n:
-        len_sum+=data[end]
+for start in range(n):
+    while interval_sum <m and end<n:
+        interval_sum += data[end]
         end+=1
         
-    if len_sum==n:
+    if interval_sum==m:
             count+=1
             
-    len_sum-=data[start]
-
+    interval_sum -= data[start]
 
 print(count)
 
