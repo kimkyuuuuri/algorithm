@@ -10,5 +10,9 @@ terms = ["A 6", "B 12", "C 3"]
 months = {v[0]: int(v[2:]) * 28 for v in terms}
 print(months['C'])
 
-# privacies는 마지막 알파벳으로 terms에서 찾아서 더해야됨.
 
+# privacies는 마지막 알파벳으로 terms에서 찾아서 더해야됨.
+result = []
+for i in privacies:
+    
+    
