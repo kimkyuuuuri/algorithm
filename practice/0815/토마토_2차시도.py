@@ -2,7 +2,6 @@ from collections import deque
 
 n,m = map(int, input().split())
 graph=[[0]*n for i in range(m)]
-
 que=deque()
 
 # 이렇게 해도 됨. 
