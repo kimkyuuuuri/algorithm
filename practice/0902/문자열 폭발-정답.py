@@ -3,7 +3,6 @@ m=input()
 stack = []
 index = len(m)
 
-
 for i in n:
     stack.append(i)
     if stack[-len(m):]==list(m):
