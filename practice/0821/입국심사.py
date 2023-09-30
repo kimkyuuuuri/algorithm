@@ -1,18 +1,22 @@
-def binary_search(start,end,times,n):
+def binary_search(n, times):
+    start=1
+    end=max(times)*n
     answer=0
+    
     while start<=end:
-        mid = (start+end)//2
-        people=0
+        temp=0
+        mid = (start+end)//2 
         for i in times:
-            people+=mid//i
-        if people>=n:
+            temp+=mid//i
+   
+        if temp >= n:
             answer=mid
             end=mid-1
-        elif people<n:
+        
+        else: 
             start=mid+1
     return answer
- 
-def solution(n, times):
-    answer=binary_search(1, max(times)*n , times,n)
-    return answer
 
+def solution(n, times):
+    answer= binary_search(n,times)
+    return answer
