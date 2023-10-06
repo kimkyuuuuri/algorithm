@@ -1,0 +1,19 @@
+n=5
+m=5
+data=[1,2,3,2,5]
+
+count=0
+interval_sum=0
+index=0
+for i in range(n):
+    while interval_sum<m and index<n:
+        interval_sum+=data[index]
+        index+=1
+
+    if interval_sum==m:
+        count+=1
+
+    interval_sum-=data[i]
+
+print(count)
+        
