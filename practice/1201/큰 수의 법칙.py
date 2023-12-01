@@ -18,7 +18,6 @@ for i in range(m):
         result+=first
         flag+=1
 
-
         
     
 print(result)
